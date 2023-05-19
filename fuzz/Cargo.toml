@@ -1,0 +1,30 @@
+[package]
+name = "daachorse-fuzz"
+version = "0.1.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.daachorse]
+path = ".."
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "initialize_ac"
+path = "fuzz_targets/initialize_ac.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "find_overlapping"
+path = "fuzz_targets/find_overlapping.rs"
+test = false
+doc = false
