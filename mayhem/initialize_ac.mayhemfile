@@ -1,0 +1,6 @@
+project: daachorse
+target: initialize_ac
+duration: 300
+
+cmds:
+  - cmd: /initialize_ac
